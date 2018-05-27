@@ -35,12 +35,12 @@ development:
 #  password: test
 #  socket: /tmp/mysql.sock
 ##
-#production:
-#  adapter: mysql2
-#  encoding: utf8
-#  reconnect: false
-#  database: ass
-#  pool: 5
+production:
+  adapter: pg
+  encoding: utf8
+  reconnect: false
+  database: vivek
+  pool: 5
 #  username: root
 #  password: test
 #  socket: /tmp/mysql.sock
