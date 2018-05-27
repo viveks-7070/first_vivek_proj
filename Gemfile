@@ -8,10 +8,10 @@ group :development do
   gem 'mysql2', '0.3.18'
 end
 
-# group :production do
+group :production do
   gem 'pg', '0.15.1'
   gem 'rails_12factor'
-# end
+end
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
