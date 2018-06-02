@@ -8,9 +8,11 @@ class TestsController < ApplicationController
   end
 
   def create
-    @test = test.new(test_params)
-    if @test.valid?
-      @test.save
+    @test = Test.new(test_params)
+    # if @test.vali?
+    p 'eeeeeeeeeeeeeeeeeeeeeeeeee'
+    p @test
+      if @test.save
       redirect_to tests_path
     else
       render 'new'
@@ -20,6 +22,6 @@ class TestsController < ApplicationController
   private
 
   def test_params
-    params.require(:tests).permit(:name)
+    params.require(:test).permit(:name)
   end
 end
