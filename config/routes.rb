@@ -1,8 +1,11 @@
 Rails.application.routes.draw do
+  get 'samples/index'
+
   # get 'tests/index'
 
 
   resources :tests
+  resources :samples
 
   root 'tests#index'
 

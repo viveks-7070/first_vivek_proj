@@ -1,6 +1,7 @@
 class TestsController < ApplicationController
   def index
     @tests = Test.all
+    @samples = Sample.all
   end
 
   def new

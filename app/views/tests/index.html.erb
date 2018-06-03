@@ -1,6 +1,7 @@
 <%= link_to 'create Entry', new_test_path %></br></br>
+<%= link_to 'Go for sample', samples_path %></br></br>
 
-
+<h2>Tests Are:</h2>
 <div>
   <table>
     <tr>
@@ -14,6 +15,28 @@
               <td><%= test.id %></td>
               <td><%= test.name %></td>
               <td style="padding-left: 30px"><%= test.created_at %></td>
+            </tr>
+        <% end %>
+    <% end %>
+  </table>
+</div>
+
+<hr>
+
+<h2>Samples Are:</h2>
+<div>
+  <table>
+    <tr>
+      <th>Id</th>
+      <th>Name</th>
+      <th>Created At</th>
+    </tr>
+    <%unless @samples.blank? %>
+        <% @samples.each do |sample| %>
+            <tr>
+              <td><%= sample.id %></td>
+              <td><%= sample.sample_name %></td>
+              <td style="padding-left: 30px"><%= sample.created_at %></td>
             </tr>
         <% end %>
     <% end %>
