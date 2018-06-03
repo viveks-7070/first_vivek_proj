@@ -7,7 +7,7 @@ class SamplesController < ApplicationController
     @sample = Sample.new
   end
 
-  def crearte
+  def create
     @sample = Sample.new(sample_params)
     if @sample.save
       redirect_to tests_path
