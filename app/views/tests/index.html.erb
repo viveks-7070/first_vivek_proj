@@ -37,7 +37,7 @@
               <td><%= sample.id %></td>
               <td><%= sample.sample_name %></td>
               <td style="padding-left: 30px"><%= sample.created_at %></td>
-              <td style="padding-left: 30px"><%= link_to 'delete', sample_path(sample), method: :delete %></td>
+              <td style="padding-left: 30px"><%= link_to 'delete', sample_path(sample), method: :delete, data: {confirm: 'Are u sure'} %></td>
             </tr>
         <% end %>
     <% end %>
