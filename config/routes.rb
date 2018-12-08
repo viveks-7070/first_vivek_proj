@@ -6,6 +6,8 @@ Rails.application.routes.draw do
 
   resources :tests
   resources :samples
+  resources :users
+  resources :sessions
 
   root 'tests#index'
 
