@@ -1,1 +1,10 @@
-hiiiiiiiiiiiiiiiiiii
+<%= form_for @user do |f| %>
+    name:<%= f.text_field :name, :id => 'abc' %><br>
+    email:<%= f.text_field :email %><br>
+    Password:<%= f.text_field :password %><br>
+    Confirm Password:<%= f.text_field :password_confirmation %><br>
+    <%= f.submit 'sign-up', :id => 'xyz' %>
+<% end %>
+
+<%= link_to 'signin', new_session_path %>
+

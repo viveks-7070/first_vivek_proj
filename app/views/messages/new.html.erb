@@ -1,0 +1,11 @@
+<%= form_for :message, url: messages_path do |f| %>
+    <%= f.text_area :body, placeholder: 'messages' %><br><br>
+    <hr>
+    <% @recipients.each do |user| %>
+        <%= user.name %>
+        <%= check_box_tag "message[user_tokens][]", user.id, (@message.users.include?(user.id)), id: "user_#{user.id}" %><br>
+    <% end %>
+    <br><br>
+    <hr>
+    <%= f.submit 'send message' %>
+<% end %>
