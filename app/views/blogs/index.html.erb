@@ -12,7 +12,7 @@ Sent Messages
   <% if @sent_messages.present? %>
       <% @sent_messages.each do |message| %>
           <tr>
-            <td><%= message.user.name %></td>
+            <td><%= message.login.name %></td>
             <td><%= message.message.body %></td>
           </tr>
       <% end %>

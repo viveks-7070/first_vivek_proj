@@ -1,4 +1,4 @@
-class User < ActiveRecord::Base
+class Login < ActiveRecord::Base
   has_many :messages, foreign_key: :sender_id
 
 
@@ -7,10 +7,10 @@ class User < ActiveRecord::Base
   before_save :encrypted_password
 
   def self.authenticate(email, password)
-    user = find_by_email(email)
-    return nil if user.blank?
-    if user[:encrypted_password] == user.encrypt(password)
-      return user
+    login = find_by_email(email)
+    return nil if login.blank?
+    if login[:encrypted_password] == login.encrypt(password)
+      return login
     end
   end
 
