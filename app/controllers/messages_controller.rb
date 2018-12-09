@@ -2,7 +2,7 @@ class MessagesController < ApplicationController
 
   def new
     @message = Message.new
-    @recipients = Login.all
+    @recipients = User.all
   end
 
   def create
@@ -18,6 +18,6 @@ class MessagesController < ApplicationController
   private
 
   def message_params
-    params.require(:message).permit(:body, :sender_id, login_tokens: [])
+    params.require(:message).permit(:body, :sender_id, user_tokens: [])
   end
 end

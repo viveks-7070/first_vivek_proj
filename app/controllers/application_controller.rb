@@ -6,21 +6,21 @@ class ApplicationController < ActionController::Base
   helper_method :current_user
 
 
-  def sign_in login
-    session[:login_id] = login.id
-    self.current_user = login
+  def sign_in user
+    session[:user_id] = user.id
+    self.current_user = user
   end
 
-  def current_user=login
-    @current_user = login
+  def current_user=user
+    @current_user = user
   end
 
   def current_user
-    @current_user ||= Login.find(session[:login_id])
+    @current_user ||= User.find(session[:user_id])
   end
 
   def sign_out
-    session[:login_id] = nil
+    session[:user_id] = nil
     self.current_user = nil
   end
 end

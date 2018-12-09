@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20181208171032) do
+ActiveRecord::Schema.define(version: 20181209141729) do
 
   create_table "logins", force: :cascade do |t|
     t.string   "name",               limit: 255
@@ -30,7 +30,7 @@ ActiveRecord::Schema.define(version: 20181208171032) do
   end
 
   create_table "recipients", force: :cascade do |t|
-    t.integer  "login_id",   limit: 4
+    t.integer  "user_id",    limit: 4
     t.integer  "message_id", limit: 4
     t.datetime "created_at",           null: false
     t.datetime "updated_at",           null: false

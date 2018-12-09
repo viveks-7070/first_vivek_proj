@@ -1,4 +1,4 @@
 class Recipient < ActiveRecord::Base
-  belongs_to :login
+  belongs_to :user
   belongs_to :message
 end

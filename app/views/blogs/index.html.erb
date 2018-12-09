@@ -1,5 +1,5 @@
 welcome <%= current_user.name %><br>
-<%#= link_to 'compose message', new_message_path %><br><br>
+<%= link_to 'compose message', new_message_path %><br><br>
 
 <%= link_to 'logout', logout_path  , method: :delete %>
 <hr>
@@ -12,7 +12,7 @@ Sent Messages
   <% if @sent_messages.present? %>
       <% @sent_messages.each do |message| %>
           <tr>
-            <td><%= message.login.name %></td>
+            <td><%= message.user.name %></td>
             <td><%= message.message.body %></td>
           </tr>
       <% end %>

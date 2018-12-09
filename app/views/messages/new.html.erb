@@ -3,7 +3,7 @@
     <hr>
     <% @recipients.each do |user| %>
         <%= user.name %>
-        <%= check_box_tag "message[login_tokens][]", user.id, (@message.logins.include?(user.id)), id: "user_#{user.id}" %><br>
+        <%= check_box_tag "message[user_tokens][]", user.id, (@message.users.include?(user.id)), id: "user_#{user.id}" %><br>
     <% end %>
     <br><br>
     <hr>
